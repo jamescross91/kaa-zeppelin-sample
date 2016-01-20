@@ -14,7 +14,7 @@ public class DataGenerator {
 
     private static final Logger LOG = LoggerFactory.getLogger(DataGenerator.class);
     private static final Random RANDOM = new Random();
-    public static final String PANEL_NAME_PREFIX = "Panel_";
+    public static final String PANEL_NAME_PREFIX = "Panel ";
     public static final double MIN_VALUE = 75.0;
     public static final int DELTA = 20;
 

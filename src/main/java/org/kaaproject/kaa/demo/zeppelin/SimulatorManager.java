@@ -53,8 +53,8 @@ public class SimulatorManager {
                     List<PowerReport> records = dataGenerator.generateLogs();
                     long timestamp = System.currentTimeMillis();
                     for (PowerReport gr : records) {
-                        LOG.info("[{}] Sending log record: {}", taskId, gr);
                         gr.setTimestamp(timestamp);
+                        LOG.info("[{}] Sending log record: {}", taskId, gr);
                         kaaClient.addLogRecord(gr);
                     }
                     TimeUnit.SECONDS.sleep(1L);
