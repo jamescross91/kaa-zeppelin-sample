@@ -1,8 +1,15 @@
 Kaa demo application for Kaa, Cassandra and Zeppelin integration.
 ============================
-This sample Kaa application generates power measurements and uploads it to Cassandra using Kaa.
+This sample Kaa application generates power measurements and uploads it to Cassandra for further processing. It can be used as a prototype for building a production-grade IoT application that measures any kind of data on the endpoints and uploads that data into the selected analytics platform.
 
-Kaa is an open-source middleware platform for building, managing, and integrating connected products with the Internet of Everything.
+This sample application can be also used as a link in the end-to-end IoT solution for data collection and analytics, as will be illustrated further in the instruction. The Kaa application will be used for data collection across the endpoints and dispatching that data to Cassandra for further processing and storage. On the next link of the chain, using Zeppelin notebook integrated with Cassandra, the user will be able to execute analytics queries over collected data and generate insightful charts and reports. 
+
+About Kaa, Cassandra, and Zeppelin
+Kaa is an open-source IoT middleware platform for building, managing, and integrating connected products with the Internet of Things. Kaa offers production-ready IoT features that allow developers to create IoT applications for smart products and connected devices in a very condensed timeframe.
+
+The Apache Cassandra database is is an open source distributed database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure. Linear scalability and proven fault-tolerance on commodity hardware or cloud infrastructure make it the perfect platform for mission-critical data. 
+
+The Apache Zeppelin is a web-based notebook that enables interactive data analytics. You can make beautiful data-driven, interactive and collaborative documents with SQL, Scala and virtually any other language or data-processing-backend.
 
 **Cassandra configuration instruction**
 
