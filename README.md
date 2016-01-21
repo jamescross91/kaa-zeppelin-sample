@@ -14,7 +14,7 @@ The Apache Zeppelin is a web-based notebook that enables interactive data analyt
 
 **Cassandra configuration instruction**
 
-1. If you use our sandbox need to upgrade cassandra to the last version(now is 2.2.4). Please add new repositories from [documentations](http://wiki.apache.org/cassandra/DebianPackaging)
+1. If you use Kaa Sandbox 0.7.4 and below, you will have to upgrade Cassandra to the latest version (now is 2.2.4). Please add new repositories from [documentation](http://wiki.apache.org/cassandra/DebianPackaging)
 
    ```
    $ sudo apt-get update
@@ -49,7 +49,7 @@ Zone per row appender:
 
 **Apache Zeppelin Installation instruction**
 
-1. Download Apache Zeppelin from official [page]( http://zeppelin.incubator.apache.org/download.html).
+1. Download Apache Zeppelin from the official [page]( http://zeppelin.incubator.apache.org/download.html).
 
    ```
    $ cd /opt
@@ -80,7 +80,7 @@ Zone power:
 
 **Starting Kaa client**
  
-To start Kaa client need to execute next command from CLI
+To start Kaa client need to execute the next command from CLI
 
   ```
   $ git clone git@github.com:kaaproject/kaa-zeppelin-sample.git
