@@ -59,15 +59,15 @@ Zone per row appender:
    $ cd ./zeppelin/conf
    $ cp ./zeppelin-env.sh.template  ./zeppelin-env.sh
    ```
-2. Change default zeppelin port if needed.(In case of free port 8080, you can skip this step).Add line **export ZEPPELIN_PORT=7080** into zeppelin-env.sh file.
+2. Change the default Zeppelin port if needed. (In case of the free port 8080, you can skip this step). Add line **export ZEPPELIN_PORT=7080** into zeppelin-env.sh file.
 
-3. Starting Zeppelin.
+3. Start Zeppelin.
 
    ```
    $ sudo /opt/zeppelin/bin/zeppelin-daemon.sh start
    ```
 
-4. Configure Cassnadra Zeppelin interpreter regarding your cassandra cluster configuration.
+4. Configure Cassandra Zeppelin interpreter according to your Cassandra cluster configuration.
     More information about Apache Zeppelin you can find on [site](http://zeppelin.incubator.apache.org/)
     On the screens below you can see our custom notebook:
 
@@ -80,7 +80,7 @@ Zone power:
 
 **Starting Kaa client**
  
-To start Kaa client need to execute the next command from CLI
+To start Kaa client, execute the following command from CLI
 
   ```
   $ git clone git@github.com:kaaproject/kaa-zeppelin-sample.git
