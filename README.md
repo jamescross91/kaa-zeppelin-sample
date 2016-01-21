@@ -6,15 +6,22 @@ Kaa is an open-source middleware platform for building, managing, and integratin
 
 **Cassandra configuration instruction**
 
-1. Enable to create user defined functions. Change property **enable_user_defined_functions: true** in cassandra.yaml file.
+1. If you use our sandbox need to upgrade cassandra to the last version(now is 2.2.4). Please add new repositories from [documentations](http://wiki.apache.org/cassandra/DebianPackaging)
 
-2. Restart cassandra
+   ```
+   $ sudo apt-get update
+   $ sudo apt-get upgrade cassandra
+   ```
+
+2. Enable to create user defined functions. Change property **enable_user_defined_functions: true** in cassandra.yaml file.
+
+3. Restart cassandra
 
    ```
    $ sudo service cassandra restart
    ```
 
-3. Create keyspace **logs** and functions for our dashboards.
+4. Create keyspace **logs** and functions for our dashboards.
 
    ```
    $ cqlsh
@@ -24,7 +31,7 @@ Kaa is an open-source middleware platform for building, managing, and integratin
    cqlsh> CREATE OR REPLACE FUNCTION logs.timeDelta(arg bigint, delta bigint) RETURNS NULL ON NULL INPUT RETURNS bigint LANGUAGE java AS $$ return arg - delta;$$;
    ```
 
-4. Configure Cassandra log appender via Kaa Admin UI. Need  to create two cassandra appenders with different mapping configuration like on screen below:
+5. Configure Cassandra log appender via Kaa Admin UI. Need  to create two cassandra appenders with different mapping configuration like on screen below:
   
 Panel per row appender:
   ![this](images/cassandra_appender_panel.png "Panel per row appender")
@@ -67,6 +74,8 @@ Zone power:
  
 To start Kaa client need to execute next command from CLI
 
-   ```
-   $ mvn clean install exec:java
-   ```
+  ```
+  $ git clone git@github.com:kaaproject/kaa-zeppelin-sample.git
+  $ cd kaa-zeppelin-sample
+  $ mvn clean install exec:java
+  ```
