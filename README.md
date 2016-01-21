@@ -14,7 +14,7 @@ The Apache Zeppelin is a web-based notebook that enables interactive data analyt
 
 **Cassandra configuration instruction**
 
-1. If you use Kaa Sandbox 0.7.4 and below, you will have to upgrade Cassandra to the latest version (now is 2.2.4). Please add new repositories from [documentation](http://wiki.apache.org/cassandra/DebianPackaging)
+1. If you use the Kaa Sandbox 0.7.4 (or lower), you will have to upgrade Cassandra to the latest version (now is 2.2.4). Please add new repositories from [documentation](http://wiki.apache.org/cassandra/DebianPackaging)
 
    ```
    $ sudo apt-get update
@@ -23,7 +23,7 @@ The Apache Zeppelin is a web-based notebook that enables interactive data analyt
 
 2. Enable to create user defined functions. Change property **enable_user_defined_functions: true** in cassandra.yaml file.
 
-3. Restart cassandra
+3. Restart Cassandra.
 
    ```
    $ sudo service cassandra restart
@@ -39,7 +39,7 @@ The Apache Zeppelin is a web-based notebook that enables interactive data analyt
    cqlsh> CREATE OR REPLACE FUNCTION logs.timeDelta(arg bigint, delta bigint) RETURNS NULL ON NULL INPUT RETURNS bigint LANGUAGE java AS $$ return arg - delta;$$;
    ```
 
-5. Configure Cassandra log appender via Kaa Admin UI. Need  to create two cassandra appenders with different mapping configuration like on screen below:
+5. Configure the Cassandra log appender via Kaa Admin UI. Create two Cassandra log appenders with different mapping configuration as follows:
   
 Panel per row appender:
   ![this](images/cassandra_appender_panel.png "Panel per row appender")
